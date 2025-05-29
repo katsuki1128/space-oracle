@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>衛星占い - 忙しいあなたに、宇宙からのメッセージ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+
+    <!-- 人工衛星 -->
+    <div class="satellite">🛰️</div>
+
+    <div class="container">
+        <section class="hero">
+            <h1>忙しいあなたに、宇宙からのメッセージ</h1>
+            <p class="subtitle">人工衛星があなたの頭上を通る瞬間、運命が動き出す</p>
+        </section>
+
+        <section class="concept">
+            <h2>空を見上げる暇がなくても、宇宙はあなたを見守っている</h2>
+            <p>朝の通勤電車で、ランチタイムのわずかな休憩で、寝る前の5分間で。</p>
+            <p>あなたの真上を通過する人工衛星が、今日の運勢をお届けします。</p>
+            <p>1日たった1分。スマホを開くだけで、400km上空からの特別なメッセージが、あなたの日常に小さな宇宙のロマンをもたらします。</p>
+        </section>
+
+        <section class="form-section">
+            <h3>🚀 事前登録受付中</h3>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 25%"></div>
+                <div class="progress-text" id="progressText">127名 / 500名</div>
+            </div>
+
+            <p class="cta-text">あと373名でサービス開始！</p>
+
+            <div class="milestone">
+                <div class="milestone-item">
+                    <div class="milestone-number">100名</div>
+                    <div class="milestone-label">✓ 開発スタート</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">300名</div>
+                    <div class="milestone-label">β版リリース</div>
+                </div>
+                <div class="milestone-item">
+                    <div class="milestone-number">500名</div>
+                    <div class="milestone-label">正式サービス化</div>
+                </div>
+            </div>
+
+            <!-- Googleフォーム埋め込み場所 -->
+            <form id="registration-form">
+                <label>
+                    メールアドレス（必須）<br>
+                    <input type="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+                </label>
+                <label>
+                    お名前（任意）<br>
+                    <input type="text" name="name" style="width: 100%; padding: 10px; margin: 10px 0;">
+                </label>
+                <button type="submit" class="submit-button">
+                    無料で事前登録する
+                </button>
+                <p id="form-message" style="margin-top: 15px;"></p>
+            </form>
+
+
+            <p class="note">
+                ※ 事前登録は無料です<br>
+                ※ 目標未達成の場合、お預かりした情報は責任を持って削除いたします<br>
+                ※ 事前登録者限定で、正式版を永久20%OFFでご利用いただけます
+            </p>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="counter.js"></script>
+
+</body>
+
+</html>
