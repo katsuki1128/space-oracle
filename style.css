@@ -63,6 +63,7 @@ body {
     }
 }
 
+
 /* メインコンテンツ */
 .container {
     max-width: 800px;
@@ -71,6 +72,35 @@ body {
     position: relative;
     z-index: 1;
 }
+
+/* ロゴ画像のスタイル */
+.hero-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out 0.1s both;
+}
+
+/* スマホ画像のスタイル */
+.hero-phone {
+    max-width: 90%;
+    height: auto;
+    margin-top: 30px;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    .hero-logo {
+        width: 60px;
+    }
+
+    .hero-phone {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
 
 .hero {
     min-height: 100vh;
