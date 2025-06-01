@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>株式会社スペースカウボーイ | 見上げる空から、つながる宇宙へ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -20,13 +20,13 @@
 
         .montserrat-regular {
             font-family: "Montserrat", sans-serif;
-            font-weight: 400;
+            font-weight: 420;
             font-style: normal;
         }
 
         .montserrat-bold {
             font-family: "Montserrat", sans-serif;
-            font-weight: 600;
+            font-weight: 560;
             font-style: normal;
         }
 
@@ -49,16 +49,11 @@
     <div class="stars" id="stars"></div>
 
     <!-- Navigation Section -->
-    <nav class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-700">
-        <div class="max-w-7xl mx-auto px-6 py-6">
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-6 md:px-12 py-12">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2 text-lg text-white montserrat-regular tracking-wide">
-                    <img src="static/img/space_cowboy_logo.png" alt="Space Cowboy Logo"
-                        class="h-8 w-8 object-contain" />
                     <span>SPACE COWBOY</span>
-                </div>
-                <div class="flex items-center space-x-2 text-lg text-white montserrat-regular">
-                    <span>SPACECOWBOY</span>
                 </div>
 
                 <div class="lg:hidden">
@@ -79,152 +74,253 @@
                 </div>
                 <!-- Mobile menu -->
                 <div id="mobile-menu"
-                    class="hidden md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-700">
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm">
                     <div class="flex flex-col space-y-6 px-6 py-6">
                         <a href="#about"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">事業概要</a>
+                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">COMPANY</a>
                         <a href="#solutions"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">サービス</a>
+                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">SERVICE</a>
                         <a href="#contact"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">お問い合わせ</a>
+                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">CONTACT</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="max-w-xl mx-auto animate-fade-in">
-            <h1 id="hero-title"
-                class="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent leading-relaxed text-left">
-                見上げる空から<br>つながる宇宙へ
-            </h1>
-            <p id="hero-subtitle"
-                class="text-base md:text-lg text-gray-300 mb-16 max-w-2xl leading-loose text-left font-light">
-                宇宙とクリエイティブ。どちらも本気でやる会社だからこそ、見える景色があります。<br>
-                あなたの課題に、ちょっとだけ広い視野で応えます。
-            </p>
+    <!-- パララックス背景 -->
+    <div class="parallax-bg" id="parallax-bg"></div>
 
-            <!-- Image slideshow -->
-            <div class="w-full mb-8">
-                <div id="hero-slideshow" class="relative w-full aspect-video rounded-xl overflow-hidden">
-                    <img src="static/img/tmp1.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-100 transition-opacity duration-1000">
-                    <img src="static/img/tmp2.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp3.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp4.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp5.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp6.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp7.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp8.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp9.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp10.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp11.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="static/img/tmp12.png" alt="スペースカウボーイ"
-                        class="slide-image w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-1000">
+    <!-- Heroセクション本体 -->
+    <div class="parallax-wrapper">
+        <section
+            class="min-h-screen flex flex-col justify-center items-start text-left px-6 pt-32 pb-16 md:px-12 md:pt-48 md:pb-24 relative z-10">
+            <div class="max-w-4xl animate-fade-in">
+                <h1 id="hero-title" class="text-6xl md:text-8xl text-white montserrat-bold mb-24"
+                    style="letter-spacing: 0.1em;">
+                    <div>
+                        <span>HELLO</span><br>
+                        <span>SPACEY-FUN</span>
+                    </div>
+                </h1>
+
+                <div class="max-w-2xl text-left leading-loose mb-12 text-white">
+                    <p id="hero-subtitle-1" class="text-2xl md:text-3xl font-medium text-white mb-8">
+                        見上げよう空を、<br>
+                        つながろう宇宙で。
+                    </p>
+                    <p id="hero-subtitle-2" class="text-sm md:text-base font-light leading-loose">
+                        日々の忙しさのなか、ふと空を見上げて心を落ち着かせる。<br>
+                        そして夢を描き、未来へ思いを馳せる。<br>
+                        そんな瞬間で、人と人とをつなげていきたい。<br><br>
+                        私たち自身も、宇宙という大きな挑戦に本気で向き合っています。<br>
+                        だからこそ、挑戦するすべての人々に、私たちは心から寄り添います。<br>
+                        あなたの課題にも、SPACEYな視野でお応えします。<br><br>
+                    </p>
+                </div>
+
+                <a href="#contact" class="hero-cta-button inline-block">
+                    <p class="flex items-center justify-center">
+                        <span class="text-2xl mr-2">🚀</span>まずはご相談ください
+                    </p>
+                </a>
+
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Photo Section -->
+    <div class="px-0 py-0 bg-black">
+        <div class="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2">
+            <div>
+                <img src="img201.jpg" alt="Image 201" class="w-full h-[20vh] object-cover" loading="lazy" />
+            </div>
+            <div>
+                <img src="img202.jpg" alt="Image 202" class="w-full h-[20vh] object-cover" loading="lazy" />
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICE Section -->
+    <section id="service" class="bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 pt-24 pb-24 md:px-12 md:pt-36 md:pb-24">
+            <div class="flex justify-between items-center mb-16">
+                <h2 class="text-4xl md:text-6xl montserrat-bold">SERVICE</h2>
+                <a href="/service" class="flex items-center text-blue-300 hover:text-blue-100 transition">
+                    <span class="text-sm md:text-base montserrat-regular">VIEW MORE &gt;</span>
+                </a>
+            </div>
+            <div class="mb-16 md:flex md:items-start md:gap-12">
+                <!-- 左側：テキスト -->
+                <div class="md:w-1/2 grid grid-rows-[1fr_auto] gap-4">
+                    <h3 class="text-2xl md:text-3xl mb-4">
+                        宇宙のことも、<br>
+                        クリエイティブのことも。
+                    </h3>
+                    <p class="text-sm md:text-base max-w-3xl mb-12">
+                        株式会社スペースカウボーイは、「宇宙事業部」と「クリエイティブコンサルティング部」の2つの軸で事業を展開。
+                        宇宙産業におけるコンテンツ制作・情報発信・エンジニアリング・プロダクト構想から、
+                        地上のクリエイティブ課題まで幅広く支援しています。
+                    </p>
+
+                    <div>
+                        <a href="#contact" class="hero-cta-button inline-block">
+                            <span class="flex items-center justify-center">
+                                <span class="text-2xl mr-2">🌝</span>サービスの詳細
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- 右側：画像 -->
+                <div class="mt-8 md:mt-0 md:w-1/2">
+                    <img src="img301.jpg" alt="サービス紹介画像" class="w-full h-auto rounded-xl shadow-lg" loading="lazy" />
                 </div>
             </div>
 
-            <a href="#contact" class="hero-cta-button inline-block">
-                まずはご相談ください
-            </a>
-        </div>
-    </section>
+            <!-- ライン -->
+            <hr class="border-t border-gray-700 my-16" />
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-800/50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="animate-fade-in">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-blue-300">
-                        スペースカウボーイとは？
-                    </h2>
-                    <p class="text-base text-gray-300 leading-loose font-light">
-                        株式会社スペースカウボーイは、宇宙と地上のクリエイティブを結びつけるユニークな企業です。
-                        事業部制をとり、宇宙事業部とクリエイティブ事業部がそれぞれの分野で価値を創出しています。
-                    </p>
-                </div>
-                <div class="animate-fade-in delay-300">
-                    <div
-                        class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl border border-blue-500/20">
-                        <div class="text-center">
-                            <div class="text-5xl mb-6">🚀</div>
-                            <h3 class="text-lg font-medium text-white mb-3">宇宙と地上をつなぐ</h3>
-                            <p class="text-sm text-gray-300 font-light">非日常の宇宙を、日常のクリエイティブで表現</p>
+            <!-- Divisions -->
+            <div class="max-w-6xl mx-auto md:pb-12">
+                <!-- 宇宙事業部 -->
+                <div class="mb-8">
+                    <div class="md:flex md:gap-12">
+                        <!-- 左カラム -->
+                        <div class="md:w-3/5 mb-8 md:mb-0">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🛰️</span>
+                                <h4 class="text-xl md:text-2xl font-bold">宇宙事業部</h3>
+                            </div>
+                            <p class="text-blue-300 text-sm md:text-base mb-6 font-medium">宇宙と社会をつなぐ</p>
+                            <p class="text-gray-300 text-sm leading-loose font-light">
+                                宇宙に関する知識や人とのつながりを深めながら、
+                                コンテンツ制作、情報発信、アプリ開発、プロダクト企画など、宇宙関連のあらゆる領域で幅広く支援。
+                                民間・行政・大学をつなぐハブとしての機能を担います。
+                            </p>
                         </div>
+
+                        <!-- 右カラム -->
+                        <div class="md:w-2/5">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 border-t border-gray-500"></div>
+                                <h4 class="text-sm font-semibold text-blue-200 ml-4 whitespace-nowrap">提供メニュー</h4>
+                            </div>
+
+                            <ul class="flex flex-wrap gap-2">
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        広報戦略設計
+                                    </span>
+                                </li>
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        映像・動画制作
+                                    </span>
+                                </li>
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        セミナー・イベント企画
+                                    </span>
+                                </li>
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        Webアプリ開発
+                                    </span>
+                                </li>
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        衛星データ利活用
+                                    </span>
+                                </li>
+                                <li>
+                                    <span
+                                        class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                        宇宙コンテンツ企画
+                                    </span>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- ライン -->
+                <hr class="border-t border-gray-700 my-16" />
+
+                <!-- クリエイティブ戦略部 -->
+                <div class>
+                    <div class="md:flex md:gap-12">
+                        <!-- 左カラム -->
+                        <div class="md:w-3/5 mb-8 md:mb-0">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🎬</span>
+                                <h3 class="text-xl md:text-2xl font-bold">クリエイティブ戦略部</h3>
+                            </div>
+                            <p class="text-purple-300 text-sm md:text-base mb-6 font-medium">「伝える」をデザインする</p>
+                            <p class="text-gray-300 text-sm leading-loose font-light">
+                                宇宙に限らず、名刺・チラシ・映像・ロゴ・SNS・Webなど、
+                                あらゆるクリエイティブ表現の課題を解決。企画・制作・運用まで一貫して伴走します。
+                                映像制作を軸に培ってきた表現力と構成力に、
+                                デザインの裏側まで理解し自ら動かせるエンジニアリングの柔軟性を加え、
+                                一貫対応でクライアントの想いを形にします。
+                            </p>
+                        </div>
+
+                        <!-- 右カラム -->
+                        <div class="md:w-2/5">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 border-t border-gray-500"></div>
+                                <h4 class="text-sm font-semibold text-purple-200 ml-4 whitespace-nowrap">提供メニュー</h4>
+                            </div>
+
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    クリエイティブトータル支援
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    映像制作
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    アニメーション制作
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    Web/アプリ制作
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    UI設計・LP制作
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    SNS運用支援
+                                </span>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    プロモーション企画
+                                </span>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="py-24 bg-gray-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-20 text-white">事業内容</h2>
-            <div class="grid md:grid-cols-2 gap-16">
-                <div
-                    class="bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-8 rounded-2xl border border-blue-500/20 animate-fade-in">
-                    <div class="text-3xl mb-6">🛰️</div>
-                    <h3 class="text-xl font-bold mb-6 text-blue-300">宇宙事業部</h3>
-                    <p class="text-sm text-gray-300 leading-loose font-light mb-6">
-                        法人広報のような業務委託から、衛星占いアプリのプロデュース、人工衛星開発まで。
-                        宇宙という非日常を、地上の視点とテクノロジーでつなぎます。
-                    </p>
-                    <a href="space_oracle.html"
-                        class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-light">
-                        <span>Space Oracle →</span>
-                    </a>
-                </div>
-                <div
-                    class="bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-8 rounded-2xl border border-purple-500/20 animate-fade-in delay-300">
-                    <div class="text-3xl mb-6">🎬</div>
-                    <h3 class="text-xl font-bold mb-6 text-purple-300">クリエイティブ事業部</h3>
-                    <p class="text-sm text-gray-300 leading-loose font-light">
-                        アニメーションから実写映像、テレビ番組からCM。ウェブアプリからウェブサイトまで。
-                        私たちが大切にしているのは、エンドユーザーに伝わること。
-                        そのために、クライアント様の想いを引き出し、ユニークなアイデアとともに提案いたします。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Case Studies Section -->
-    <section class="py-24 bg-gray-800/50">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-20 text-white">導入事例</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 animate-fade-in">
-                    <div class="text-xs text-gray-400 mb-4 font-light">2025年 | 株式会社クアンド</div>
-                    <h3 class="text-lg font-bold mb-4 text-white">M&Aセレモニーのストーリー化</h3>
-                    <p class="text-sm text-gray-300 leading-loose font-light">
-                        M&Aのセレモニーを映像として残したいというご要望を受け、対象企業の視点で構成。
-                        密な事前打ち合わせと現場対応により、限られた条件でも高品質な映像を制作。
-                    </p>
-                </div>
-                <div
-                    class="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 animate-fade-in delay-300">
-                    <div class="text-xs text-gray-400 mb-4 font-light">2024年 | 一般社団法人 航空宇宙産業推進ネットワーク</div>
-                    <h3 class="text-lg font-bold mb-4 text-white">コンテンツ作りから運営企画まで</h3>
-                    <p class="text-sm text-gray-300 leading-loose font-light">
-                        機関紙・ウェブ・動画・セミナーの企画制作運営を一貫して対応。
-                        行政・大学とも連携し、宇宙産業の発展を広報で支援。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="py-24 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
@@ -326,24 +422,33 @@
         // Initialize stars on page load
         document.addEventListener('DOMContentLoaded', createStars);
 
-        // Hero slideshow functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide-image');
-        const totalSlides = slides.length;
-
-        function showSlide(n) {
-            slides.forEach((slide, index) => {
-                slide.style.opacity = index === n ? '1' : '0';
-            });
+        // iOS Parallax Fix
+        function isiOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
+        if (isiOS()) {
+            // iOSデバイスの場合、スクロールに応じて背景を移動
+            const parallaxBg = document.getElementById('parallax-bg');
+            if (parallaxBg) {
+                let ticking = false;
+                function updateParallax() {
+                    const scrolled = window.pageYOffset;
+                    const speed = 0.0;
+                    parallaxBg.style.transform = `translateY(${scrolled * speed}px)`;
+                    ticking = false;
+                }
+
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
+                });
+            }
         }
 
-        // Auto-play slideshow
-        setInterval(nextSlide, 3000);
     </script>
 </body>
 
