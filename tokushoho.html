@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表記 - Space Oracle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+
+    <div class="container mx-auto px-4 py-12 max-w-4xl relative z-10">
+        <div class="bg-gray-900/80 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+            <h1 class="pt-serif text-xl font-bold text-indigo-300 mb-8 text-center">
+                特定商取引法に基づく表記
+            </h1>
+
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">事業者名</h2>
+                    <p class="text-xs text-gray-300">株式会社スペースカウボーイ</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">販売責任者</h2>
+                    <p class="text-xs text-gray-300">香月 浩一</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">所在地</h2>
+                    <p class="text-xs text-gray-300">〒810-0001 福岡県福岡市中央区天神4-6-28 天神ファーストビル7階</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">メールアドレス</h2>
+                    <p class="text-xs text-gray-300">info@space-cowboy.jp</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">電話番号</h2>
+                    <p class="text-xs text-gray-300">080-8953-6893</p>
+                    <p class="text-gray-400 text-xs">受付時間：平日10:00〜18:00（土日祝を除く）</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">販売価格</h2>
+                    <p class="text-xs text-gray-300">500円（税込）または USD 3〜5</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">商品・サービスの内容</h2>
+                    <p class="text-xs text-gray-300">
+                        本商品は、宇宙と星座を活用したデジタルエンタメ体験を支援する目的のデジタルコンテンツです。<br>
+                        物理的な商品の発送はございません。
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">引渡し時期</h2>
+                    <p class="text-xs text-gray-300">購入後、即時Web画面またはメールにて案内いたします</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">返品・返金について</h2>
+                    <p class="text-xs text-gray-300">
+                        本商品は支援という性質上、返品・返金には応じられません。<br>
+                        予めご了承ください。
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">お支払い方法</h2>
+                    <p class="text-xs text-gray-300">Stripe決済（クレジットカード、デビットカード等）</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">追加手数料等の追加料金</h2>
+                    <p class="text-xs text-gray-300">追加料金は発生しません。</p>
+                </div>
+
+                <div>
+                    <h2 class="text-sm font-semibold text-indigo-300 mb-2">決済期間</h2>
+                    <p class="text-xs text-gray-300">クレジットカード決済は即時処理されます。</p>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-center gap-4">
+                <button id="backButton"
+                    class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-light">
+                    <svg class="w-4 h-4 mr-2 transform transition-transform hover:-translate-x-1" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span id="backButtonText">戻る</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 星空の生成（簡易版）
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 50;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            createStars();
+
+            // リファラーに基づいて戻るボタンの設定
+            const backButton = document.getElementById('backButton');
+            const backButtonText = document.getElementById('backButtonText');
+            const referrer = document.referrer;
+
+            if (referrer.includes('space_oracle.html')) {
+                backButtonText.textContent = 'Space Oracleに戻る';
+                backButton.onclick = () => window.location.href = 'space_oracle.html';
+            } else if (referrer.includes('index.html') || referrer.endsWith('/')) {
+                backButtonText.textContent = 'ホームに戻る';
+                backButton.onclick = () => window.location.href = 'index.html';
+            } else {
+                // デフォルトはブラウザの戻る機能
+                backButtonText.textContent = '前のページに戻る';
+                backButton.onclick = () => window.history.back();
+            }
+        });
+    </script>
+</body>
+
+</html>

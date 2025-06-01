@@ -1,93 +1,228 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>衛星占い - 忙しいあなたに、宇宙からのメッセージ</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Space Oracle - A message from the universe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
+    <!-- 言語切り替えトグルボタン -->
+    <div class="language-toggle">
+        <div id="langToggle" class="toggle-button">
+            <span id="jpText" class="lang-option">JP</span>
+            <span class="separator">|</span>
+            <span id="enText" class="lang-option active">EN</span>
+        </div>
+    </div>
+
     <!-- 星空背景 -->
     <div class="stars" id="stars"></div>
 
     <!-- 人工衛星 -->
+
     <div class="satellite">🛰️</div>
 
     <div class="container">
-        <section class="hero">
-            <img src="space_oracle_logo_alpha.png" alt="SpaceOracle Logo" class="hero-logo">
 
-            <h1>A message from the universe, for your busy day.</h1>
-            <p class="subtitle">When a satellite passes overhead, your destiny shifts.</p>
+        <section class="flex flex-col items-center justify-center text-center text-white px-4 py-4">
+            <img src="static/img/space_oracle_logo_alpha.png" alt="SpaceOracle Logo"
+                class="w-56 mb-6 animate-fade-in" />
 
-            <img src="Phone.png" alt="App Preview" class="hero-phone">
-        </section>
-
-
-        <section class="concept">
-            <h2>Even when you can’t look up, the cosmos watches over you.</h2>
-            <p>During your morning commute, your lunch break, or just before bed,</p>
-            <p>a satellite passing overhead delivers your fortune.</p>
-            <p>Just one minute a day. One tap reveals a message from 400 km above — a little cosmic magic in your
-                everyday.</p>
-            <img src="Phone+3.png" alt="Constellation fortune screen" style="max-width: 100%; margin-top: 30px;">
-        </section>
-
-
-        <section class="form-section">
-            <h3>🚀 事前登録受付中</h3>
-
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressBar" style="width: 25%"></div>
-                <div class="progress-text" id="progressText">127名 / 500名</div>
+            <!-- スマホ画像をマスクするボックス -->
+            <div class="h-72 overflow-hidden rounded-xl shadow-lg animate-fade-in delay-500 w-2/5 sm:w-2/5">
+                <img src="static/img/img.png" alt="App Preview" class="w-full object-cover" />
             </div>
 
-            <p class="cta-text">あと373名でサービス開始！</p>
+
+            <h1 id="heroTitle"
+                class="pt-serif text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent my-4 animate-fade-in">
+                Even in chaos, the universe speaks.
+            </h1>
+
+            <p id="heroSubtitle" class="text-base sm:text-lg text-gray-300 mb-6 animate-fade-in delay-300">
+                When a satellite passes overhead, your destiny shifts.
+            </p>
+
+            <!-- Hero CTA Button -->
+            <button id="heroCTA" class="hero-cta-button animate-fade-in delay-500 my-12">
+                <span id="heroCtaText">🚀 Get Early Access</span>
+            </button>
+        </section>
+
+
+        <section class="px-4 py-12 text-white text-center max-w-6xl mx-auto">
+            <!-- Flex container for image and text -->
+            <div class="flex flex-col lg:flex-row items-center lg:items-start text-left gap-8">
+
+                <!-- Left: Texts -->
+                <div class="flex-1 text-center">
+                    <h2 id="sectionTitle"
+                        class="pt-serif text-2xl sm:text-3xl font-semibold text-indigo-300 mb-4 animate-fade-in delay-100">
+                        Even when you can’t look up, the cosmos watches over you.
+                    </h2>
+
+                    <p id="sectionText1" class="text-base sm:text-lg text-gray-300 mb-2 animate-fade-in delay-200">
+                        During your morning commute, your lunch break, or just before bed,
+                    </p>
+                    <p id="sectionText2" class="text-base sm:text-lg text-gray-300 mb-2 animate-fade-in delay-300">
+                        a satellite passing overhead delivers your fortune.
+                    </p>
+                    <p id="sectionText3" class="text-base sm:text-lg text-gray-300 animate-fade-in delay-400">
+                        Just one minute a day. One tap reveals a message from 400 km above — a little cosmic magic in
+                        your everyday.
+                    </p>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="flex-1">
+                    <img src="static/img/img02.png" alt="Constellation fortune screen"
+                        class="w-full rounded-lg shadow-lg animate-fade-in mt-8 lg:mt-0" />
+                </div>
+            </div>
+
+            <!-- CTA Button (always centered below content) -->
+            <div class="mt-10 flex justify-center">
+                <button id="conceptCTA" class="concept-cta-button animate-fade-in delay-500">
+                    <span id="conceptCtaText">Start Your Cosmic Journey</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Product/Service Explanation and Pricing Section -->
+        <section class="px-4 py-12 text-white text-center max-w-4xl mx-auto">
+            <div class="bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+                <h3 id="supportTitle" class="pt-serif text-2xl font-semibold text-indigo-300 mb-6">
+                    Support Our Space Digital Experience Project
+                </h3>
+
+                <div class="text-left space-y-4 mb-6">
+                    <p id="supportDescription1" class="text-gray-300">
+                        This is a one-time support purchase for a space-based digital experience project.
+                        No physical products will be shipped. The purchase is not refundable.
+                    </p>
+
+                    <div class="bg-gray-800/70 rounded-lg p-4 mt-4">
+                        <h4 id="pricingTitle" class="text-indigo-300 font-semibold mb-2">Pricing & Policy</h4>
+                        <ul class="text-gray-300 space-y-1">
+                            <li id="pricingInfo">• Price: ¥500 or USD 3-5 (One-time support)</li>
+                            <li id="refundPolicy">• No Refunds: Due to the support nature, refunds are not available
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button id="supportCTA" class="concept-cta-button">
+                    <span id="supportCtaText">Support This Project</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="text-center mt-16">
+            <h2 id="stripeTitle" class="text-xl md:text-2xl font-bold text-indigo-300 mb-4">
+                Support the Space Oracle Project
+            </h2>
+            <p id="stripeDescription" class="text-gray-300 mb-6">
+                Your support helps us bring space and creativity together in a new form of entertainment.
+            </p>
+            <a href="https://buy.stripe.com/5kQ6oz76O7BB2ps8QJ6c000" target="_blank"
+               class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg text-sm font-medium shadow-md">
+                <span id="stripeCTA">Support with $3.00</span>
+            </a>
+        </section>
+
+        <section class="form-section">
+            <h3 id="preRegisterTitle">🚀 Pre-registration Open</h3>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                <div class="progress-text" id="progressText"></div>
+            </div>
+
+            <p id="ctaText" class="cta-text">0 signups left until launch!</p>
 
             <div class="milestone">
                 <div class="milestone-item">
-                    <div class="milestone-number">100名</div>
-                    <div class="milestone-label">✓ 開発スタート</div>
+                    <div class="milestone-number">
+                        <span id="count1"></span><span class="countUnit">名</span>
+                    </div>
+                    <div id="milestone1" class="milestone-label">Development Started</div>
                 </div>
                 <div class="milestone-item">
-                    <div class="milestone-number">300名</div>
-                    <div class="milestone-label">β版リリース</div>
+                    <div class="milestone-number">
+                        <span id="count2"></span><span class="countUnit">名</span>
+                    </div>
+                    <div id="milestone2" class="milestone-label">Beta Release</div>
                 </div>
                 <div class="milestone-item">
-                    <div class="milestone-number">500名</div>
-                    <div class="milestone-label">正式サービス化</div>
+                    <div class="milestone-number">
+                        <span id="count3"></span><span class="countUnit">名</span>
+                    </div>
+                    <div id="milestone3" class="milestone-label">Official Launch</div>
                 </div>
             </div>
 
+
+
             <!-- Googleフォーム埋め込み場所 -->
             <form id="registration-form">
-                <label>
-                    メールアドレス（必須）<br>
+                <label id="emailLabel">
+                    Email Address (Required)<br>
                     <input type="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0;">
                 </label>
-                <label>
-                    お名前（任意）<br>
+                <label id="nameLabel">
+                    Name (Optional)<br>
                     <input type="text" name="name" style="width: 100%; padding: 10px; margin: 10px 0;">
                 </label>
-                <button type="submit" class="submit-button">
-                    無料で事前登録する
+                <button id="submitButton" type="submit" class="submit-button">
+                    Sign Up for Free
                 </button>
                 <p id="form-message" style="margin-top: 15px;"></p>
             </form>
 
 
-            <p class="note">
-                ※ 事前登録は無料です<br>
-                ※ 目標未達成の場合、お預かりした情報は責任を持って削除いたします<br>
-                ※ 事前登録者限定で、正式版を永久20%OFFでご利用いただけます
+            <p id="noteText" class="note">
+                ※ Pre-registration is free<br>
+                ※ If targets are not met, your information will be responsibly deleted<br>
+                ※ Pre-registrants get permanent 20% OFF on the official version
             </p>
         </section>
     </div>
 
-    <script src="main.js"></script>
-    <script src="counter.js"></script>
+    <!-- Footer with Legal Links -->
+    <footer class="bg-gray-900/80 backdrop-blur-sm border-t border-gray-700 py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="text-gray-400 text-sm mb-4">
+                <a href="index.html" class="inline-flex items-center space-x-2 hover:text-gray-200 transition-colors">
+                    <img src="static/img/space_cowboy_logo.png" alt="Space Cowboy Logo" class="h-6 w-6 object-contain" />
+                    <span id="footerCompany">株式会社スペースカウボーイ</span>
+                </a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="/tokushoho.html" id="footerTokushoho"
+                    class="text-gray-300 hover:text-indigo-400 transition-colors">
+                    特定商取引法に基づく表記
+                </a>
+                <a href="/privacy.html" id="footerPrivacy"
+                    class="text-gray-300 hover:text-indigo-400 transition-colors">
+                    プライバシーポリシー
+                </a>
+                <a href="/terms.html" id="footerTerms" class="text-gray-300 hover:text-indigo-400 transition-colors">
+                    利用規約
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
 
 </body>
 
