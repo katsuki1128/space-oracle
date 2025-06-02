@@ -494,6 +494,11 @@ nav {
     animation: zoomOut 5s ease-out;
 }
 
+/* サービスページ専用背景 */
+.service-page .parallax-bg {
+    background-image: url('universe02.jpg');
+}
+
 .parallax-bg::after {
     content: '';
     position: absolute;

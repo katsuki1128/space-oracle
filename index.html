@@ -56,7 +56,7 @@
                     <span>SPACE COWBOY</span>
                 </div>
 
-                <div class="lg:hidden">
+                <div class="md:hidden">
                     <button id="menu-button" class="focus:outline-none text-white p-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -64,24 +64,45 @@
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:flex space-x-10">
-                    <a href="#about"
-                        class="text-sm font-light text-white hover:text-blue-400 transition-colors">COMPANY</a>
-                    <a href="#solutions"
-                        class="text-sm font-light text-white hover:text-blue-400 transition-colors">SERVICE</a>
+                <div class="hidden md:flex space-x-10">
+                    <a href="/about.html"
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">COMPANY</a>
+                    <a href="/service.html"
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">SERVICE</a>
                     <a href="#contact"
-                        class="text-sm font-light text-white hover:text-blue-400 transition-colors">CONTACT</a>
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">CONTACT</a>
                 </div>
                 <!-- Mobile menu -->
                 <div id="mobile-menu"
-                    class="hidden md:hidden absolute top-full left-0 w-full bg-gray-900/95 backdrop-blur-sm">
-                    <div class="flex flex-col space-y-6 px-6 py-6">
-                        <a href="#about"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">COMPANY</a>
-                        <a href="#solutions"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">SERVICE</a>
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl">
+                    <div class="flex flex-col px-6 py-8">
+                        <a href="/about.html"
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
+                            <span>COMPANY</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/service.html"
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
+                            <span>SERVICE</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
                         <a href="#contact"
-                            class="text-sm font-light text-white hover:text-blue-400 transition-colors">CONTACT</a>
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular">
+                            <span>CONTACT</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -112,8 +133,8 @@
                         日々の忙しさのなか、ふと空を見上げて心を落ち着かせる。<br>
                         そして夢を描き、未来へ思いを馳せる。<br>
                         そんな瞬間で、人と人とをつなげていきたい。<br><br>
-                        私たち自身も、宇宙という大きな挑戦に本気で向き合っています。<br>
-                        だからこそ、挑戦するすべての人々に、私たちは心から寄り添います。<br>
+                        私たち自身も、宇宙という挑戦に本気で向き合っています。<br>
+                        だからこそ、挑戦するすべての人々に、心から寄り添います。<br>
                         あなたの課題にも、SPACEYな視野でお応えします。<br><br>
                     </p>
                 </div>
@@ -146,7 +167,7 @@
         <div class="max-w-6xl mx-auto px-6 pt-24 pb-24 md:px-12 md:pt-36 md:pb-24">
             <div class="flex justify-between items-center mb-16">
                 <h2 class="text-4xl md:text-6xl montserrat-bold">SERVICE</h2>
-                <a href="/service" class="flex items-center text-blue-300 hover:text-blue-100 transition">
+                <a href="/service.html" class="flex items-center text-blue-300 hover:text-blue-100 transition">
                     <span class="text-sm md:text-base montserrat-regular">VIEW MORE &gt;</span>
                 </a>
             </div>
@@ -158,13 +179,13 @@
                         クリエイティブのことも。
                     </h3>
                     <p class="text-sm md:text-base max-w-3xl mb-12">
-                        株式会社スペースカウボーイは、「宇宙事業部」と「クリエイティブコンサルティング部」の2つの軸で事業を展開。
+                        株式会社スペースカウボーイは、「宇宙事業部」と「クリエイティブ事業部」の2つの軸で事業を展開。
                         宇宙産業におけるコンテンツ制作・情報発信・エンジニアリング・プロダクト構想から、
                         地上のクリエイティブ課題まで幅広く支援しています。
                     </p>
 
                     <div>
-                        <a href="#contact" class="hero-cta-button inline-block">
+                        <a href="/service.html" class="hero-cta-button inline-block">
                             <span class="flex items-center justify-center">
                                 <span class="text-2xl mr-2">🌝</span>サービスの詳細
                             </span>
@@ -202,7 +223,7 @@
 
                         <!-- 右カラム -->
                         <div class="md:w-2/5">
-                            <div class="flex items-center mb-4">
+                            <div class="flex items-center mb-8">
                                 <div class="w-16 border-t border-gray-500"></div>
                                 <h4 class="text-sm font-semibold text-blue-200 ml-4 whitespace-nowrap">提供メニュー</h4>
                             </div>
@@ -262,7 +283,7 @@
                         <div class="md:w-3/5 mb-8 md:mb-0">
                             <div class="flex items-center mb-4">
                                 <span class="text-3xl mr-3">🎬</span>
-                                <h3 class="text-xl md:text-2xl font-bold">クリエイティブ戦略部</h3>
+                                <h3 class="text-xl md:text-2xl font-bold">クリエイティブ事業部</h3>
                             </div>
                             <p class="text-purple-300 text-sm md:text-base mb-6 font-medium">「伝える」をデザインする</p>
                             <p class="text-gray-300 text-sm leading-loose font-light">
@@ -276,7 +297,7 @@
 
                         <!-- 右カラム -->
                         <div class="md:w-2/5">
-                            <div class="flex items-center mb-4">
+                            <div class="flex items-center mb-8">
                                 <div class="w-16 border-t border-gray-500"></div>
                                 <h4 class="text-sm font-semibold text-purple-200 ml-4 whitespace-nowrap">提供メニュー</h4>
                             </div>
@@ -320,7 +341,18 @@
         </div>
     </section>
 
-
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <h2 class="text-4xl md:text-6xl montserrat-bold mb-12 text-center">COMPANY</h2>
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-lg md:text-xl text-gray-300 leading-loose mb-8">
+                    株式会社スペースカウボーイは、宇宙産業とクリエイティブの融合を目指す企業です。
+                    新しい視点と技術で、宇宙を身近な存在にすることを使命としています。
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA Section -->
     <section class="py-24 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
@@ -369,20 +401,20 @@
                 © 2025 株式会社スペースカウボーイ
             </div>
             <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="privacy.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="/privacy.html" class="text-gray-300 hover:text-blue-400 transition-colors">
                     プライバシーポリシー
                 </a>
-                <a href="terms.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="/terms.html" class="text-gray-300 hover:text-blue-400 transition-colors">
                     利用規約
                 </a>
-                <a href="tokushoho.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                <a href="/tokushoho.html" class="text-gray-300 hover:text-blue-400 transition-colors">
                     特定商取引法に基づく表記
                 </a>
             </div>
         </div>
     </footer>
 
-    <script src="static/js/main.js"></script>
+    <script src="/main.js"></script>
     <script>
         // Mobile menu toggle
         document.getElementById('menu-button').addEventListener('click', function () {

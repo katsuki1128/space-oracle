@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス | 株式会社スペースカウボーイ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .montserrat-regular {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 420;
+            font-style: normal;
+        }
+
+        .montserrat-bold {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 560;
+            font-style: normal;
+        }
+
+        .outfit-bold {
+            font-family: "Outfit", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .outfit-regular {
+            font-family: "Outfit", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white service-page">
+    <!-- 星空背景 -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation Section -->
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-6 md:px-12 py-12">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 text-lg text-white montserrat-regular tracking-wide">
+                    <a href="/">SPACE COWBOY</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-button" class="focus:outline-none text-white p-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="/about.html"
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">COMPANY</a>
+                    <a href="/service.html"
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">SERVICE</a>
+                    <a href="/#contact"
+                        class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">CONTACT</a>
+                </div>
+                <!-- Mobile menu -->
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl">
+                    <div class="flex flex-col px-6 py-8">
+                        <a href="/about.html"
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
+                            <span>COMPANY</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/service.html"
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
+                            <span>SERVICE</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="/#contact"
+                            class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular">
+                            <span>CONTACT</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- パララックス背景 -->
+    <div class="parallax-bg" id="parallax-bg"></div>
+
+    <!-- メインコンテンツ -->
+    <div class="parallax-wrapper">
+        <section class="min-h-screen pt-32 md:pt-48 relative z-10">
+            <div class="max-w-6xl mx-auto px-6 md:px-12">
+                <!-- ページタイトル -->
+                <div class="mb-48 animate-fadeInUpSlow">
+                    <h1 class="text-5xl md:text-7xl montserrat-bold text-white mb-8">SERVICE</h1>
+                    <p class="text-xl md:text-2xl text-blue-300 font-light mb-8">
+                        宇宙から地上まで、表現と技術で課題解決
+                    </p>
+                    <p class="text-base md:text-lg text-gray-300 leading-loose max-w-4xl">
+                        スペースカウボーイは「宇宙事業部」と「クリエイティブ事業部」の2つの軸で、
+                        宇宙に関する社会実装から地上での表現課題まで、企画・制作・運用をワンストップで支援します。
+                    </p>
+                </div>
+            </div>
+            <!-- コンテンツエリア -->
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-32 bg-gray-900 bg-opacity-80">
+                <!-- 宇宙事業部 -->
+                <div id="space-division" class="scroll-mt-32">
+                    <div class="mb-8">
+                        <p class="text-4xl md:text-6xl montserrat-bold text-blue-600 mb-1">
+                            SPACE DIVISION
+                        </p>
+                        <div class="flex items-center mb-12">
+                            <div class="w-16 border-t border-gray-500"></div>
+                            <h2 class="text-base md:text-xl ml-4">宇宙事業部</h2>
+                        </div>
+                        <p class="text-lg md:text-xl text-blue-300 mb-6">
+                            宇宙を社会に届ける。学びからエンタメまで、次世代の宇宙体験を形に。
+                        </p>
+                        <p class="text-gray-300 leading-loose mb-12">
+                            私たち宇宙事業部は、学びから衛星データ活用、将来的な人工衛星のエンターテインメント活用まで、
+                            宇宙の可能性を社会にひらくための多様な挑戦を行っています。
+                        </p>
+                    </div>
+
+                    <!-- 解決できる課題（縦線付き） -->
+                    <div class="mb-24">
+                        <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                            <p class="text-sm text-gray-300 tracking-widest mb-1">01 — 解決できる課題</p>
+                            <h3 class="text-3xl md:text-4xl montserrat-bold tracking-wide">PROBLEM
+                            </h3>
+                        </div>
+                        <p class="text-base mb-6">以下のような課題を解決いたします。</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    宇宙分野に興味はあるが、何から調べればいいかわからない
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    衛星データを使って何か新しい取り組みをしたいが、技術的に不安がある
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    宇宙×エンタメという未知の領域に挑戦したい
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 提供できるメニュー（縦線付き） -->
+                    <div class="mb-24">
+                        <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                            <p class="text-sm text-gray-300 tracking-widest mb-1">02 — 提供できるメニュー</p>
+                            <h3 class="text-3xl md:text-4xl montserrat-bold tracking-wide">SERVICE MENU
+                            </h3>
+                        </div>
+
+                        <ul class="flex flex-wrap gap-2">
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    広報戦略設計
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    映像・動画制作
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    セミナー・イベント企画
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    Webアプリ開発
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    Webサイト管理
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    衛星データ利活用
+                                </span>
+                            </li>
+                            <li>
+                                <span
+                                    class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                    宇宙コンテンツ企画
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-32 bg-purple-900 bg-opacity-30">
+                <!-- クリエイティブ事業部 -->
+                <div id="space-division" class="scroll-mt-32">
+                    <div class="mb-8">
+                        <p class="text-4xl md:text-6xl montserrat-bold text-purple-600 mb-1">
+                            CREATIVE DIVISION
+                        </p>
+                        <div class="flex items-center mb-12">
+                            <div class="w-16 border-t border-gray-500"></div>
+                            <h2 class="text-base md:text-xl ml-4">クリエイティブ事業部</h2>
+                        </div>
+                        <p class="text-lg md:text-xl text-purple-300 mb-6">
+                            「伝える」をデザインする。あらゆる表現課題に応えるプロ集団。
+                        </p>
+                        <p class="text-gray-300 leading-loose mb-12">
+                            映像・デザイン・Web・SNSなど、伝える手段を横断的に支援。
+                            映像制作で培った表現力と構成力に、
+                            デザインの裏側まで理解し自ら動かせるエンジニアリングの柔軟性を加え、
+                            企画から制作・運用まで一貫対応でクライアントの想いを形にします。
+                        </p>
+                    </div>
+
+                    <!-- 解決できる課題（縦線付き） -->
+                    <div class="mb-24">
+                        <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                            <p class="text-sm text-gray-300 tracking-widest mb-1">01 — 解決できる課題</p>
+                            <h3 class="text-3xl md:text-4xl montserrat-bold tracking-wide">PROBLEM
+                            </h3>
+                        </div>
+                        <p class="text-base mb-6">以下のような課題を解決いたします。</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    何を作ればよいかすらわからない状態で、アイデアを整理してほしい
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    クリエイティブとエンジニアリングがバラバラで、品質と進行管理にばらつきがある
+                                </span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 mt-2 mr-4 bg-gray-500 rounded-full"></span>
+                                <span class="text-sm md:text-base leading-relaxed">
+                                    SNSや動画を活用した広報を始めたいが、どこから手をつければいいか分からない
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 提供できるメニュー（縦線付き） -->
+                    <div class="mb-24">
+                        <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                            <p class="text-sm text-gray-300 tracking-widest mb-1">02 — 提供できるメニュー</p>
+                            <h3 class="text-3xl md:text-4xl montserrat-bold tracking-wide">SERVICE MENU
+                            </h3>
+                        </div>
+
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                クリエイティブトータル支援
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                映像制作
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                アニメーション制作
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                Web/アプリ制作
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                UI設計・LP制作
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                SNS運用支援
+                            </span>
+                            <span
+                                class="text-sm text-white bg-gray-500 rounded-full px-3 py-[0.3rem] leading-tight flex items-center">
+                                プロモーション企画
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-32 bg-gray-900 bg-opacity-80">
+                <div id="case" class="scroll-mt-32">
+                    <div class="mb-24">
+                        <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                            <p class="text-sm text-gray-300 tracking-widest mb-1">03 — 実績</p>
+                            <h3 class="text-3xl md:text-4xl text-gray-300 montserrat-bold tracking-wide">CASE
+                            </h3>
+                        </div>
+
+                        <!-- 共通実績 -->
+                        <div class="max-w-7xl mx-auto py-12">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <!-- 1枚のカード：6回繰り返す -->
+                                <div id="case-01">
+                                    <div class="case-inner">
+                                        <!-- 画像 -->
+                                        <img src="https://picsum.photos/600/400?random=1" alt="実績画像"
+                                            class="case-image" />
+
+                                        <!-- テキスト -->
+                                        <div class="case-content">
+                                            <p class="case-meta">
+                                                <span>2024</span>
+                                                <span class="mx-1">|</span>
+                                                <span>宇宙事業部</span>
+                                            </p>
+                                            <h3 class="case-title">
+                                                一般社団法人 航空宇宙産業推進ネットワークの広報業務をワンストップで受託
+                                            </h3>
+                                            <div class="case-tags">
+                                                <span>クリエイティブトータル支援</span>
+                                                <span>映像・動画制作</span>
+                                                <span>Webアプリ開発</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- カード2 -->
+                                <div id="case-02">
+                                    <div class="case-inner">
+                                        <img src="https://picsum.photos/600/400?random=2" alt="実績画像"
+                                            class="case-image" />
+                                        <div class="case-content">
+                                            <p class="case-meta">
+                                                <span>2025/1/9</span>
+                                                <span class="mx-1">|</span>
+                                                <span>クリエイティブ事業部</span>
+                                            <h3 class="case-title">
+                                                株式会社クアンド様のM&Aセレモニーをドキュメント映像として制作</h3>
+                                            <div class="case-tags">
+                                                <span>映像・動画制作</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- カード3 -->
+                                <div id="case-03">
+                                    <div class="case-inner">
+                                        <img src="https://picsum.photos/600/400?random=3" alt="実績画像"
+                                            class="case-image" />
+                                        <div class="case-content">
+                                            <p class="case-meta">
+                                                <span>2025</span>
+                                                <span class="mx-1">|</span>
+                                                <span>クリエイティブ事業部</span>
+                                            <h3 class="case-title">
+                                                衛星データを活用した可視化アプリ開発にエンジニアとして参画</h3>
+                                            <div class="case-tags">
+                                                <span>Vue.js</span>
+                                                <span>Web/アプリ制作</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- カード4 -->
+                                <div id="case-04">
+                                    <div class="case-inner">
+                                        <img src="https://picsum.photos/600/400?random=4" alt="実績画像"
+                                            class="case-image" />
+                                        <div class="case-content">
+                                            <p class="case-meta">
+                                                <span>2025/4/26</span>
+                                                <span class="mx-1">|</span>
+                                                <span>宇宙事業部</span>
+                                            <h3 class="case-title">
+                                                産学連携の宇宙ビジネス交流会を開催</h3>
+                                            <div class="case-tags">
+                                                <span>ポスター</span>
+                                                <span>セミナー・イベント企画</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- カード5 -->
+                                <div id="case-05">
+                                    <div class="case-inner">
+                                        <img src="https://picsum.photos/600/400?random=5" alt="実績画像"
+                                            class="case-image" />
+                                        <div class="case-content">
+                                            <p class="case-meta">
+                                                <span>2025/4/26</span>
+                                                <span class="mx-1">|</span>
+                                                <span>宇宙事業部</span>
+                                            <h3 class="case-title">占いアプリ「Space
+                                                Oracle」プロトタイプ設計</h3>
+                                            <div class="case-tags">
+                                                <span>Web/アプリ制作</span>
+                                                <span>UI設計・LP制作</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- カード6 -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ライン -->
+            <hr class="border-t border-gray-700" />
+
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-32 bg-gray-900 bg-opacity-80">
+                <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                    <p class="text-sm text-gray-300 tracking-widest mb-1">04 —サービスの流れ</p>
+                    <h3 class="text-3xl md:text-4xl text-gray-300 montserrat-bold tracking-wide">FLOW
+                    </h3>
+                </div>
+                <!-- サービスの流れ -->
+
+                <!-- FLOWステップ一覧 -->
+                <div class="space-y-4">
+                    <!-- STEP 01 -->
+                    <div class=" border border-gray-700 p-6 md:flex md:items-start md:justify-between">
+                        <div class="flex items-start space-x-6">
+
+                            <!-- 左：STEP -->
+                            <div class="text-center">
+                                <p class="text-xs text-gray-400 montserrat-regular">STEP</p>
+                                <p class="text-3xl font-bold text-white">01</p>
+                            </div>
+
+
+                            <!-- 中央：縦線（上下 margin で抜け） -->
+                            <div class="h-full">
+                                <div class="w-px h-12 bg-gray-500 my-2"></div>
+                            </div>
+
+                            <!-- 右：テキスト＋ボタン -->
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">お問い合わせ</h4>
+                                <p class="text-sm text-gray-300 mb-4">
+                                    お問い合わせフォームよりご依頼内容をご記入の上、お問い合わせください。<br class="hidden md:block">
+                                    担当者よりお打ち合わせの日程をご連絡させていただきます。
+                                </p>
+                                <a href="#contact"
+                                    class="inline-block bg-white text-black text-sm font-bold px-5 py-2 rounded hover:bg-gray-200 transition">
+                                    お問い合わせ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ▼アイコン（中央揃え） -->
+                    <div class="flex justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 15a.75.75 0 01-.53-.22l-4.5-4.5a.75.75 0 111.06-1.06L10 12.69l3.97-3.97a.75.75 0 011.06 1.06l-4.5 4.5a.75.75 0 01-.53.22z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <!-- STEP 02 -->
+                    <div class="border border-gray-700 p-6 md:flex md:items-start md:justify-between">
+                        <div class="flex items-start space-x-6">
+                            <!-- 左：STEP -->
+                            <div class="text-center">
+                                <p class="text-xs text-gray-400 montserrat-regular">STEP</p>
+                                <p class="text-3xl font-bold text-white">02</p>
+                            </div>
+
+
+                            <!-- 中央：縦線（上下 margin で抜け） -->
+                            <div class="h-full">
+                                <div class="w-px h-12 bg-gray-500 my-2"></div>
+                            </div>
+
+                            <!-- 右：テキスト＋ボタン -->
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">初回無料ヒヤリング</h4>
+                                <p class="text-sm text-gray-300">
+                                    貴社の事業課題、現在の取組内容などをヒヤリングさせていただき、プロジェクトのミッションを明確にします。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ▼アイコン（中央揃え） -->
+                    <div class="flex justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 15a.75.75 0 01-.53-.22l-4.5-4.5a.75.75 0 111.06-1.06L10 12.69l3.97-3.97a.75.75 0 011.06 1.06l-4.5 4.5a.75.75 0 01-.53.22z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <!-- STEP 03 -->
+                    <div class="border border-gray-700 p-6 md:flex md:items-start md:justify-between">
+                        <div class="flex items-start space-x-6">
+                            <!-- 左：STEP -->
+                            <div class="text-center">
+                                <p class="text-xs text-gray-400 montserrat-regular">STEP</p>
+                                <p class="text-3xl font-bold text-white">03</p>
+                            </div>
+
+
+                            <!-- 中央：縦線（上下 margin で抜け） -->
+                            <div class="h-full">
+                                <div class="w-px h-12 bg-gray-500 my-2"></div>
+                            </div>
+
+                            <!-- 右：テキスト＋ボタン -->
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">ご提案・ディスカッション</h4>
+                                <p class="text-sm text-gray-300">
+                                    初回ヒヤリングにていただいた情報を基に、競合分析・市場調査などを行い、課題解決のプランをご提案させていただきます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ▼アイコン（中央揃え） -->
+                    <div class="flex justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 15a.75.75 0 01-.53-.22l-4.5-4.5a.75.75 0 111.06-1.06L10 12.69l3.97-3.97a.75.75 0 011.06 1.06l-4.5 4.5a.75.75 0 01-.53.22z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <!-- STEP 04 -->
+                    <div class="border border-gray-700 p-6 md:flex md:items-start md:justify-between">
+                        <div class="flex items-start space-x-6">
+                            <!-- 左：STEP -->
+                            <div class="text-center">
+                                <p class="text-xs text-gray-400 montserrat-regular">STEP</p>
+                                <p class="text-3xl font-bold text-white">04</p>
+                            </div>
+
+
+                            <!-- 中央：縦線（上下 margin で抜け） -->
+                            <div class="h-full">
+                                <div class="w-px h-12 bg-gray-500 my-2"></div>
+                            </div>
+
+                            <!-- 右：テキスト＋ボタン -->
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">ご契約</h4>
+                                <p class="text-sm text-gray-300">
+                                    ご提案内容に合意いただけましたら、契約の締結を行わせていただきます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ▼アイコン（中央揃え） -->
+                    <div class="flex justify-center">
+                        <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 15a.75.75 0 01-.53-.22l-4.5-4.5a.75.75 0 111.06-1.06L10 12.69l3.97-3.97a.75.75 0 011.06 1.06l-4.5 4.5a.75.75 0 01-.53.22z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+
+                    <!-- STEP 05 -->
+                    <div class="border border-gray-700 p-6 md:flex md:items-start md:justify-between">
+                        <div class="flex items-start space-x-6">
+                            <!-- 左：STEP -->
+                            <div class="text-center">
+                                <p class="text-xs text-gray-400 montserrat-regular">STEP</p>
+                                <p class="text-3xl font-bold text-white">05</p>
+                            </div>
+
+
+                            <!-- 中央：縦線（上下 margin で抜け） -->
+                            <div class="h-full">
+                                <div class="w-px h-12 bg-gray-500 my-2"></div>
+                            </div>
+
+                            <!-- 右：テキスト＋ボタン -->
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">プロジェクト開始</h4>
+                                <p class="text-sm text-gray-300">
+                                    契約締結後、合意いただいたプランを基にプロジェクトを進行します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-12 bg-gray-900 bg-opacity-80">
+                <div class="border-l-4 border-gray-300 pl-4 mb-6">
+                    <p class="text-sm text-gray-300 tracking-widest mb-1">05 —よくある質問</p>
+                    <h3 class="text-3xl md:text-4xl text-gray-300 montserrat-bold tracking-wide">FAQ
+                    </h3>
+                </div>
+                <!-- よくある質問 -->
+
+                <div class="border border-gray-700 p-6 space-y-6">
+                    <!-- Q行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-white text-black font-bold text-xl flex items-center justify-center leading-none">
+                                Q
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">料金プランについて知りたいのですが？</h4>
+                        </div>
+                    </div>
+
+                    <!-- 区切り線 -->
+                    <div class="px-6">
+                        <hr class="border-t border-gray-700">
+                    </div>
+
+                    <!-- A行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-gray-500 text-white font-bold text-xl flex items-center justify-center leading-none">
+                                A
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-regular text-white mb-2">固定のプランがないため、お客様の課題や取り組み内容によって金額が変わってくるため、
+                                ヒヤリングの上ご提案をさせていただく際にお見積もりを提出させていただきます。</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="border border-gray-700 p-6 space-y-6">
+                    <!-- Q行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-white text-black font-bold text-xl flex items-center justify-center leading-none">
+                                Q
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">アイデアベースでも相談できますか？</h4>
+                        </div>
+                    </div>
+
+                    <!-- 区切り線 -->
+                    <div class="px-6">
+                        <hr class="border-t border-gray-700">
+                    </div>
+
+                    <!-- A行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-gray-500 text-white font-bold text-xl flex items-center justify-center leading-none">
+                                A
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-regular text-white mb-2">もちろんです。企画段階から伴走可能ですので、お気軽にご相談ください。</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-700 p-6 space-y-6">
+                    <!-- Q行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-white text-black font-bold text-xl flex items-center justify-center leading-none">
+                                Q
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">映像・Web・アプリを一括で依頼できますか？</h4>
+                        </div>
+                    </div>
+
+                    <!-- 区切り線 -->
+                    <div class="px-6">
+                        <hr class="border-t border-gray-700">
+                    </div>
+
+                    <!-- A行 -->
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <p
+                                class="flex-shrink-0 w-12 h-12 rounded-full bg-gray-500 text-white font-bold text-xl flex items-center justify-center leading-none">
+                                A
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-regular text-white mb-2">はい、すべて対応可能です。ワンストップの進行で安心してご依頼いただけます。</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-12 bg-gray-900 bg-opacity-80">
+                <!-- CTA -->
+                <div class="text-center">
+                    <a href="/#contact" class="hero-cta-button inline-flex items-center">
+                        <span class="text-2xl mr-2">🚀</span>
+                        まずはご相談ください
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/80 backdrop-blur-sm border-t border-gray-700 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="text-gray-400 text-sm mb-4">
+                © 2025 株式会社スペースカウボーイ
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="/privacy.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                    プライバシーポリシー
+                </a>
+                <a href="/terms.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                    利用規約
+                </a>
+                <a href="/tokushoho.html" class="text-gray-300 hover:text-blue-400 transition-colors">
+                    特定商取引法に基づく表記
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Create stars background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 100;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Initialize stars on page load
+        document.addEventListener('DOMContentLoaded', createStars);
+
+        // iOS Parallax Fix
+        function isiOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        }
+
+        if (isiOS()) {
+            // iOSデバイスの場合、スクロールに応じて背景を移動
+            const parallaxBg = document.getElementById('parallax-bg');
+            if (parallaxBg) {
+                let ticking = false;
+                function updateParallax() {
+                    const scrolled = window.pageYOffset;
+                    const speed = 0.0;
+                    parallaxBg.style.transform = `translateY(${scrolled * speed}px)`;
+                    ticking = false;
+                }
+
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
+                });
+            }
+        }
+
+        // 実績カードのスタイルをJSで制御
+        document.addEventListener('DOMContentLoaded', function () {
+            // case-01からcase-06までの要素を取得
+            const caseIds = ['case-01', 'case-02', 'case-03', 'case-04', 'case-05', 'case-06'];
+
+            caseIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    // カード外側のスタイルを適用
+                    element.classList.add('overflow-hidden', 'transition-all', 'duration-300', 'hover:bg-gray-800/50');
+
+                    // 内側のコンテナスタイルを適用
+                    const innerContainer = element.querySelector('.case-inner');
+                    if (innerContainer) {
+                        innerContainer.classList.add('flex', 'flex-row', 'md:flex-col', 'h-full');
+                    }
+
+                    // 画像のスタイルを適用
+                    const images = element.querySelectorAll('.case-image');
+                    images.forEach(img => {
+                        img.classList.add('w-32', 'h-32', 'md:w-full', 'md:h-48', 'object-cover', 'flex-shrink-0', 'opacity-0', 'transition-opacity', 'duration-1000');
+
+                        // 画像が読み込まれたらフェードイン
+                        img.addEventListener('load', function () {
+                            setTimeout(() => {
+                                this.classList.remove('opacity-0');
+                                this.classList.add('opacity-100');
+                            }, 100);
+                        });
+
+                        // 画像がすでに読み込まれている場合（キャッシュから）
+                        if (img.complete) {
+                            setTimeout(() => {
+                                img.classList.remove('opacity-0');
+                                img.classList.add('opacity-100');
+                            }, 100);
+                        }
+                    });
+
+                    // コンテンツコンテナのスタイルを適用
+                    const contentContainers = element.querySelectorAll('.case-content');
+                    contentContainers.forEach(container => {
+                        container.classList.add('p-4', 'md:p-2', 'flex', 'flex-col', 'justify-between');
+                    });
+
+                    // メタ情報のスタイルを適用
+                    const metaElements = element.querySelectorAll('.case-meta');
+                    metaElements.forEach(meta => {
+                        meta.classList.add('text-xs', 'text-gray-400', 'mb-2');
+                    });
+
+                    // タイトルのスタイルを適用
+                    const titleElements = element.querySelectorAll('.case-title');
+                    titleElements.forEach(title => {
+                        title.classList.add('text-sm', 'font-bold', 'text-gray-300', 'leading-snug', 'mb-3');
+                    });
+
+                    // タグコンテナのスタイルを適用
+                    const tagContainers = element.querySelectorAll('.case-tags');
+                    tagContainers.forEach(container => {
+                        container.classList.add('flex', 'flex-wrap', 'gap-2');
+
+                        // 各タグのスタイルを適用
+                        const tags = container.querySelectorAll('span');
+                        tags.forEach(tag => {
+                            tag.classList.add('bg-gray-700', 'text-gray-200', 'text-xs', 'font-medium', 'px-3', 'py-1', 'rounded-full', 'shadow-sm');
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
