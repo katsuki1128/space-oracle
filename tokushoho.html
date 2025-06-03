@@ -102,42 +102,12 @@
         </div>
     </div>
 
+    <script src="/main.js"></script>
     <script>
-        // 星空の生成（簡易版）
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const starCount = 50;
-
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                starsContainer.appendChild(star);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            createStars();
-
-            // リファラーに基づいて戻るボタンの設定
-            const backButton = document.getElementById('backButton');
-            const backButtonText = document.getElementById('backButtonText');
-            const referrer = document.referrer;
-
-            if (referrer.includes('space_oracle.html')) {
-                backButtonText.textContent = 'Space Oracleに戻る';
-                backButton.onclick = () => window.location.href = 'space_oracle.html';
-            } else if (referrer.includes('index.html') || referrer.endsWith('/')) {
-                backButtonText.textContent = 'ホームに戻る';
-                backButton.onclick = () => window.location.href = 'index.html';
-            } else {
-                // デフォルトはブラウザの戻る機能
-                backButtonText.textContent = '前のページに戻る';
-                backButton.onclick = () => window.history.back();
-            }
+        // tokushoho.html専用の初期化
+        SpaceCowboy.init({
+            starCount: 50,
+            enableSmoothScroll: false
         });
     </script>
 </body>

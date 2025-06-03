@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,18 +26,6 @@
         .montserrat-bold {
             font-family: "Montserrat", sans-serif;
             font-weight: 560;
-            font-style: normal;
-        }
-
-        .outfit-bold {
-            font-family: "Outfit", sans-serif;
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        .outfit-regular {
-            font-family: "Outfit", sans-serif;
-            font-weight: 300;
             font-style: normal;
         }
     </style>
@@ -65,18 +52,18 @@
                     </button>
                 </div>
                 <div class="hidden md:flex space-x-10">
-                    <a href="/about.html"
+                    <a href="/company.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">COMPANY</a>
                     <a href="/service.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">SERVICE</a>
-                    <a href="#contact"
+                    <a href="/contact.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">CONTACT</a>
                 </div>
                 <!-- Mobile menu -->
                 <div id="mobile-menu"
-                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl">
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl z-50">
                     <div class="flex flex-col px-6 py-8">
-                        <a href="/about.html"
+                        <a href="/company.html"
                             class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
                             <span>COMPANY</span>
                             <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
@@ -94,7 +81,7 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="#contact"
+                        <a href="/contact.html"
                             class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular">
                             <span>CONTACT</span>
                             <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
@@ -139,7 +126,7 @@
                     </p>
                 </div>
 
-                <a href="#contact" class="hero-cta-button inline-block">
+                <a href="/contact.html" class="hero-cta-button inline-block">
                     <p class="flex items-center justify-center">
                         <span class="text-2xl mr-2">🚀</span>まずはご相談ください
                     </p>
@@ -154,10 +141,10 @@
     <div class="px-0 py-0 bg-black">
         <div class="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2">
             <div>
-                <img src="img201.jpg" alt="Image 201" class="w-full h-[20vh] object-cover" loading="lazy" />
+                <img src="hero_image_01.jpg" alt="Hero Image 1" class="w-full h-[20vh] object-cover" loading="lazy" />
             </div>
             <div>
-                <img src="img202.jpg" alt="Image 202" class="w-full h-[20vh] object-cover" loading="lazy" />
+                <img src="hero_image_02.jpg" alt="Hero Image 2" class="w-full h-[20vh] object-cover" loading="lazy" />
             </div>
         </div>
     </div>
@@ -195,7 +182,8 @@
                 </div>
                 <!-- 右側：画像 -->
                 <div class="mt-8 md:mt-0 md:w-1/2">
-                    <img src="img301.jpg" alt="サービス紹介画像" class="w-full h-auto rounded-xl shadow-lg" loading="lazy" />
+                    <img src="service_overview.jpg" alt="サービス紹介画像" class="w-full h-auto rounded-xl shadow-lg opacity-0 transition-opacity duration-1000"
+                        loading="lazy" onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');" />
                 </div>
             </div>
 
@@ -219,6 +207,10 @@
                                 コンテンツ制作、情報発信、アプリ開発、プロダクト企画など、宇宙関連のあらゆる領域で幅広く支援。
                                 民間・行政・大学をつなぐハブとしての機能を担います。
                             </p>
+                            <a href="/service.html#space-division" class="arrow-link">
+                                <span class="text-sm">詳しく見る</span>
+                                <span class="arrow"></span>
+                            </a>
                         </div>
 
                         <!-- 右カラム -->
@@ -293,6 +285,10 @@
                                 デザインの裏側まで理解し自ら動かせるエンジニアリングの柔軟性を加え、
                                 一貫対応でクライアントの想いを形にします。
                             </p>
+                            <a href="/service.html#creative-division" class="arrow-link purple">
+                                <span class="text-sm">詳しく見る</span>
+                                <span class="arrow"></span>
+                            </a>
                         </div>
 
                         <!-- 右カラム -->
@@ -338,18 +334,48 @@
                     </div>
                 </div>
             </div>
+            <!-- ライン -->
+
+
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-800">
-        <div class="max-w-6xl mx-auto px-6 md:px-12">
-            <h2 class="text-4xl md:text-6xl montserrat-bold mb-12 text-center">COMPANY</h2>
-            <div class="text-center max-w-3xl mx-auto">
-                <p class="text-lg md:text-xl text-gray-300 leading-loose mb-8">
-                    株式会社スペースカウボーイは、宇宙産業とクリエイティブの融合を目指す企業です。
-                    新しい視点と技術で、宇宙を身近な存在にすることを使命としています。
-                </p>
+    <!-- Company Section -->
+    <section id="company" class="bg-gray-800 bg-opacity-70 text-white">
+        <div class="max-w-6xl mx-auto px-6 pt-24 pb-24 md:px-12 md:pt-36 md:pb-24">
+            <div class="flex justify-between items-center mb-16">
+                <h2 class="text-4xl md:text-6xl montserrat-bold">COMPANY</h2>
+                <a href="/company.html" class="flex items-center text-blue-300 hover:text-blue-100 transition">
+                    <span class="text-sm md:text-base montserrat-regular">VIEW MORE &gt;</span>
+                </a>
+            </div>
+            <div class="mb-16 md:flex md:items-start md:gap-12">
+                <!-- 左側：テキスト -->
+                <div class="md:w-1/2 grid grid-rows-[1fr_auto] gap-4">
+                    <h3 class="text-2xl md:text-3xl mb-4">
+                        宇宙を身近に、<br>
+                        未来を創造する。
+                    </h3>
+                    <p class="text-sm md:text-base max-w-3xl mb-12">
+                        株式会社スペースカウボーイは、2023年に設立された宇宙産業とクリエイティブを融合する企業です。
+                        最先端の技術と独創的な発想で、宇宙ビジネスの新たな地平を切り拓きます。
+                        私たちのビジョンは、誰もが宇宙の可能性に触れられる世界を実現すること。
+                    </p>
+
+                    <div>
+                        <a href="/company.html" class="hero-cta-button inline-block">
+                            <span class="flex items-center justify-center">
+                                <span class="text-2xl mr-2">🏢</span>会社概要を見る
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- 右側：画像 -->
+                <div class="mt-8 md:mt-0 md:w-1/2">
+                    <img src="https://picsum.photos/600/400?random=company" alt="会社紹介画像"
+                        class="w-full h-auto rounded-xl shadow-lg" loading="lazy" />
+                </div>
             </div>
         </div>
     </section>
@@ -358,129 +384,89 @@
     <section class="py-24 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-8 text-white">お気軽にご相談ください</h2>
-            <a href="#contact" class="concept-cta-button">
+            <a href="/contact.html" class="concept-cta-button">
                 まずはご相談ください
             </a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-gray-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-white">お問い合わせ</h2>
-            <p class="text-center text-gray-300 mb-16 text-base font-light leading-loose">
-                あなたのアイデアや質問をお聞かせください。私たちと一緒に宇宙の可能性を広げていきましょう。
-            </p>
-            <form action="#" method="post" class="max-w-lg mx-auto space-y-8">
-                <div>
-                    <label for="name" class="block text-xs font-light mb-3 text-gray-300">お名前</label>
-                    <input type="text" id="name" name="name"
-                        class="w-full p-4 bg-gray-800 text-sm text-white rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors">
-                </div>
-                <div>
-                    <label for="email" class="block text-xs font-light mb-3 text-gray-300">メールアドレス</label>
-                    <input type="email" id="email" name="email"
-                        class="w-full p-4 bg-gray-800 text-sm text-white rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors">
-                </div>
-                <div>
-                    <label for="message" class="block text-xs font-light mb-3 text-gray-300">メッセージ</label>
-                    <textarea id="message" name="message" rows="5"
-                        class="w-full p-4 bg-gray-800 text-sm text-white rounded-lg border border-gray-600 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-colors resize-vertical"></textarea>
-                </div>
-                <button type="submit" class="w-full submit-button">
-                    送信する
-                </button>
-            </form>
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/80 backdrop-blur-sm border-t border-gray-700 py-8">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="text-gray-400 text-sm mb-4">
-                © 2025 株式会社スペースカウボーイ
+    <footer class="text-white text-sm mt-20">
+        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <!-- 左：会社名・住所 -->
+            <div>
+                <h2 class="text-xl montserrat-bold mb-2">SPACE COWBOY</h2>
+                <p class="text-xs mb-1">株式会社スペースカウボーイ</p>
+                <p class="text-xs text-gray-400 mb-1">〒810-0001</p>
+                <p class="text-xs text-gray-400 mb-1">福岡市中央区天神4-6-28 天神ファーストビル7F</p>
             </div>
-            <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="/privacy.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    プライバシーポリシー
-                </a>
-                <a href="/terms.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    利用規約
-                </a>
-                <a href="/tokushoho.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    特定商取引法に基づく表記
-                </a>
+
+            <!-- 中央左：ナビゲーション -->
+            <div>
+                <ul class="space-y-1">
+                    <li><a href="/company.html" class="montserrat-bold hover:underline">COMPANY</a></li>
+                    <li><a href="/service.html" class="montserrat-bold hover:underline">SERVICE</a>
+                        <ul class="ml-4 mt-1 space-y-1">
+                            <li><a href="/service.html#space-division" class="text-sm text-gray-400 hover:underline">—
+                                    SPACE
+                                    DIVISION</a></li>
+                            <li><a href="/service.html#creative-division"
+                                    class="text-sm text-gray-400 hover:underline">— CREATIVE
+                                    DIVISION</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact.html" class="montserrat-bold hover:underline">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- 空のカラム -->
+            <div></div>
+
+            <!-- 右：SNS -->
+            <div class="text-right">
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 justify-end">
+                        <!-- Xアイコン -->
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        <a href="https://x.com/cutkey5" class="montserrat-regular hover:underline"
+                            target="_blank">X(twitter)</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 下部：コピーライト -->
+        <div class="max-w-6xl mx-auto px-6 text-xs text-gray-500 py-12">
+            <div class="border-t border-gray-600 pt-8">
+                <div
+                    class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <a href="/privacy.html" class="hover:underline">プライバシーポリシー</a>
+                        <a href="/terms.html" class="hover:underline">利用規約</a>
+                        <a href="/tokushoho.html" class="hover:underline">特定商取引法に基づく表記</a>
+                    </div>
+                    <div>
+                        &copy;2025 SPACE COWBOY .Inc
+                    </div>
+                </div>
             </div>
         </div>
+
     </footer>
 
     <script src="/main.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-button').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
+        // index.html専用の初期化
+        SpaceCowboy.init({
+            starCount: 100,
+            enableSmoothScroll: true
         });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Create stars background
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const numberOfStars = 100;
-
-            for (let i = 0; i < numberOfStars; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starsContainer.appendChild(star);
-            }
-        }
-
-        // Initialize stars on page load
-        document.addEventListener('DOMContentLoaded', createStars);
-
-        // iOS Parallax Fix
-        function isiOS() {
-            return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        }
-
-        if (isiOS()) {
-            // iOSデバイスの場合、スクロールに応じて背景を移動
-            const parallaxBg = document.getElementById('parallax-bg');
-            if (parallaxBg) {
-                let ticking = false;
-                function updateParallax() {
-                    const scrolled = window.pageYOffset;
-                    const speed = 0.0;
-                    parallaxBg.style.transform = `translateY(${scrolled * speed}px)`;
-                    ticking = false;
-                }
-
-                window.addEventListener('scroll', function () {
-                    if (!ticking) {
-                        window.requestAnimationFrame(updateParallax);
-                        ticking = true;
-                    }
-                });
-            }
-        }
-
     </script>
 </body>
 

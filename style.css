@@ -491,12 +491,22 @@ nav {
     height: 100vh;
     z-index: -1;
     will-change: transform;
-    animation: zoomOut 5s ease-out;
+    animation: fadeIn 0.5s ease-in, zoomOut 5s ease-out;
 }
 
 /* サービスページ専用背景 */
 .service-page .parallax-bg {
-    background-image: url('universe02.jpg');
+    background-image: url('service.jpg');
+}
+
+/* 会社概要ページ専用背景 */
+.company-page .parallax-bg {
+    background-image: url('company_image.jpg');
+}
+
+/* お問い合わせページ専用背景 */
+.contact-page .parallax-bg {
+    background-image: url('contact_image.jpg');
 }
 
 .parallax-bg::after {
@@ -546,4 +556,52 @@ nav {
     z-index: 1;
     background-color: transparent;
     min-height: 100vh;
+}
+
+/* 矢印リンク */
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    color: #60a5fa; /* blue-400 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.arrow-link:hover {
+    color: #93c5fd; /* blue-300 */
+}
+
+.arrow-link:hover .arrow {
+    transform: translateX(5px);
+}
+
+.arrow {
+    position: relative;
+    width: 30px;
+    height: 1px;
+    background-color: currentColor;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 0;
+    transform-origin: right bottom;
+    width: 10px;
+    height: 1px;
+    background-color: currentColor;
+    transform: rotate(45deg);
+}
+
+/* パープル系の矢印リンク */
+.arrow-link.purple {
+    color: #c084fc; /* purple-400 */
+}
+
+.arrow-link.purple:hover {
+    color: #d8b4fe; /* purple-300 */
 }

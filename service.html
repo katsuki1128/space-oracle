@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,18 +27,6 @@
         .montserrat-bold {
             font-family: "Montserrat", sans-serif;
             font-weight: 560;
-            font-style: normal;
-        }
-
-        .outfit-bold {
-            font-family: "Outfit", sans-serif;
-            font-weight: 900;
-            font-style: normal;
-        }
-
-        .outfit-regular {
-            font-family: "Outfit", sans-serif;
-            font-weight: 300;
             font-style: normal;
         }
     </style>
@@ -65,18 +53,18 @@
                     </button>
                 </div>
                 <div class="hidden md:flex space-x-10">
-                    <a href="/about.html"
+                    <a href="/company.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">COMPANY</a>
                     <a href="/service.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">SERVICE</a>
-                    <a href="/#contact"
+                    <a href="/contact.html"
                         class="text-sm font-light text-white hover:text-blue-400 transition-colors montserrat-regular">CONTACT</a>
                 </div>
                 <!-- Mobile menu -->
                 <div id="mobile-menu"
-                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl">
+                    class="hidden md:hidden absolute top-full left-0 w-full bg-black/85 backdrop-blur-md border-t border-gray-700/50 shadow-2xl z-50">
                     <div class="flex flex-col px-6 py-8">
-                        <a href="/about.html"
+                        <a href="/company.html"
                             class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular border-b border-gray-700/30 hover:border-blue-400/50">
                             <span>COMPANY</span>
                             <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
@@ -94,7 +82,7 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="/#contact"
+                        <a href="/contact.html"
                             class="group flex items-center justify-between py-4 text-base font-light text-white hover:text-blue-400 transition-all duration-300 montserrat-regular">
                             <span>CONTACT</span>
                             <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300"
@@ -237,7 +225,7 @@
 
             <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-32 bg-purple-900 bg-opacity-30">
                 <!-- クリエイティブ事業部 -->
-                <div id="space-division" class="scroll-mt-32">
+                <div id="creative-division" class="scroll-mt-32">
                     <div class="mb-8">
                         <p class="text-4xl md:text-6xl montserrat-bold text-purple-600 mb-1">
                             CREATIVE DIVISION
@@ -753,7 +741,7 @@
             <div class="max-w-6xl mx-auto px-6 md:px-12 py-24 space-y-12 bg-gray-900 bg-opacity-80">
                 <!-- CTA -->
                 <div class="text-center">
-                    <a href="/#contact" class="hero-cta-button inline-flex items-center">
+                    <a href="/contact.html" class="hero-cta-button inline-flex items-center">
                         <span class="text-2xl mr-2">🚀</span>
                         まずはご相談ください
                     </a>
@@ -763,76 +751,79 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/80 backdrop-blur-sm border-t border-gray-700 py-8 relative z-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="text-gray-400 text-sm mb-4">
-                © 2025 株式会社スペースカウボーイ
+    <footer class="text-white text-sm mt-20">
+        <div class="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <!-- 左：会社名・住所 -->
+            <div>
+                <h2 class="text-xl montserrat-bold mb-2">SPACE COWBOY</h2>
+                <p class="text-xs mb-1">株式会社スペースカウボーイ</p>
+                <p class="text-xs text-gray-400 mb-1">〒810-0001</p>
+                <p class="text-xs text-gray-400 mb-1">福岡市中央区天神4-6-28 天神ファーストビル7F</p>
             </div>
-            <div class="flex flex-wrap justify-center gap-6 text-sm">
-                <a href="/privacy.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    プライバシーポリシー
-                </a>
-                <a href="/terms.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    利用規約
-                </a>
-                <a href="/tokushoho.html" class="text-gray-300 hover:text-blue-400 transition-colors">
-                    特定商取引法に基づく表記
-                </a>
+
+            <!-- 中央左：ナビゲーション -->
+            <div>
+                <ul class="space-y-1">
+                    <li><a href="/company.html" class="montserrat-bold hover:underline">COMPANY</a></li>
+                    <li><a href="/service.html" class="montserrat-bold hover:underline">SERVICE</a>
+                        <ul class="ml-4 mt-1 space-y-1">
+                            <li><a href="/service.html#space-division" class="text-sm text-gray-400 hover:underline">— SPACE
+                                    DIVISION</a></li>
+                            <li><a href="/service.html#creative-division" class="text-sm text-gray-400 hover:underline">— CREATIVE
+                                    DIVISION</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact.html" class="montserrat-bold hover:underline">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- 空のカラム -->
+            <div></div>
+
+            <!-- 右：SNS -->
+            <div class="text-right">
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 justify-end">
+                        <!-- Xアイコン -->
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        <a href="https://x.com/cutkey5" class="montserrat-regular hover:underline"
+                            target="_blank">X(twitter)</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 下部：コピーライト -->
+        <div class="max-w-6xl mx-auto px-6 text-xs text-gray-500 py-12">
+            <div class="border-t border-gray-600 pt-8">
+                <div
+                    class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <a href="/privacy.html" class="hover:underline">プライバシーポリシー</a>
+                        <a href="/terms.html" class="hover:underline">利用規約</a>
+                        <a href="/tokushoho.html" class="hover:underline">特定商取引法に基づく表記</a>
+                    </div>
+                    <div>
+                        &copy;2025 SPACE COWBOY .Inc
+                    </div>
+                </div>
             </div>
         </div>
+
     </footer>
 
+    <script src="/main.js"></script>
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-button').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
+        // service.html専用の初期化
+        SpaceCowboy.init({
+            starCount: 100,
+            enableSmoothScroll: false
         });
-
-        // Create stars background
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const numberOfStars = 100;
-
-            for (let i = 0; i < numberOfStars; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starsContainer.appendChild(star);
-            }
-        }
-
-        // Initialize stars on page load
-        document.addEventListener('DOMContentLoaded', createStars);
-
-        // iOS Parallax Fix
-        function isiOS() {
-            return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        }
-
-        if (isiOS()) {
-            // iOSデバイスの場合、スクロールに応じて背景を移動
-            const parallaxBg = document.getElementById('parallax-bg');
-            if (parallaxBg) {
-                let ticking = false;
-                function updateParallax() {
-                    const scrolled = window.pageYOffset;
-                    const speed = 0.0;
-                    parallaxBg.style.transform = `translateY(${scrolled * speed}px)`;
-                    ticking = false;
-                }
-
-                window.addEventListener('scroll', function () {
-                    if (!ticking) {
-                        window.requestAnimationFrame(updateParallax);
-                        ticking = true;
-                    }
-                });
-            }
-        }
 
         // 実績カードのスタイルをJSで制御
         document.addEventListener('DOMContentLoaded', function () {
