@@ -11,7 +11,7 @@ const SpaceCowboy = {
      * @param {number} options.parallaxSpeed - パララックスの速度（デフォルト: 0.0）
      * @param {boolean} options.enableSmoothScroll - スムーススクロールを有効化
      */
-    init: function(options = {}) {
+    init: function (options = {}) {
         // DOMContentLoadedイベントを待つ
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
@@ -22,12 +22,12 @@ const SpaceCowboy = {
         }
     },
 
-    _initialize: function(options) {
+    _initialize: function (options) {
         this.initMobileMenu();
         this.initStars(options.starCount || 100);
         this.initParallax(options.parallaxSpeed || 0.0);
         this.initBackButton();
-        
+
         if (options.enableSmoothScroll) {
             this.initSmoothScroll();
         }
@@ -36,23 +36,44 @@ const SpaceCowboy = {
     /**
      * モバイルメニューの初期化
      */
-    initMobileMenu: function() {
+    initMobileMenu: function () {
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        console.log('initMobileMenu called');
-        console.log('menuButton:', menuButton);
-        console.log('mobileMenu:', mobileMenu);
-        
+
         if (menuButton && mobileMenu) {
-            menuButton.addEventListener('click', function(e) {
-                console.log('Menu button clicked');
+            menuButton.addEventListener('click', function (e) {
                 e.preventDefault();
-                mobileMenu.classList.toggle('hidden');
-                console.log('Menu visibility toggled, hidden class:', mobileMenu.classList.contains('hidden'));
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    // メニューを開く
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.remove('slide-up');
+                    mobileMenu.classList.add('slide-down');
+                } else {
+                    // メニューを閉じる
+                    mobileMenu.classList.remove('slide-down');
+                    mobileMenu.classList.add('slide-up');
+                    
+                    // アニメーション終了後にhiddenクラスを追加
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+                }
             });
-        } else {
-            console.error('Menu elements not found');
+            
+            // メニュー外をクリックしたら閉じる
+            document.addEventListener('click', function(e) {
+                if (!menuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.remove('slide-down');
+                        mobileMenu.classList.add('slide-up');
+                        
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                        }, 300);
+                    }
+                }
+            });
         }
     },
 
@@ -60,11 +81,11 @@ const SpaceCowboy = {
      * 星空背景の作成
      * @param {number} count - 星の数
      */
-    initStars: function(count) {
+    initStars: function (count) {
         const starsContainer = document.getElementById('stars');
-        
+
         if (!starsContainer) return;
-        
+
         for (let i = 0; i < count; i++) {
             const star = document.createElement('div');
             star.className = 'star';
@@ -79,21 +100,21 @@ const SpaceCowboy = {
      * iOSデバイスのパララックス修正
      * @param {number} speed - パララックスの速度
      */
-    initParallax: function(speed) {
+    initParallax: function (speed) {
         if (!this.isiOS()) return;
-        
+
         const parallaxBg = document.getElementById('parallax-bg');
         if (!parallaxBg) return;
-        
+
         let ticking = false;
-        
+
         function updateParallax() {
             const scrolled = window.pageYOffset;
             parallaxBg.style.transform = `translateY(${scrolled * speed}px)`;
             ticking = false;
         }
-        
-        window.addEventListener('scroll', function() {
+
+        window.addEventListener('scroll', function () {
             if (!ticking) {
                 window.requestAnimationFrame(updateParallax);
                 ticking = true;
@@ -105,7 +126,7 @@ const SpaceCowboy = {
      * iOSデバイスの検出
      * @returns {boolean} iOSデバイスかどうか
      */
-    isiOS: function() {
+    isiOS: function () {
         return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
             (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     },
@@ -113,14 +134,14 @@ const SpaceCowboy = {
     /**
      * 戻るボタンの初期化（プライバシーポリシーなどのページ用）
      */
-    initBackButton: function() {
+    initBackButton: function () {
         const backButton = document.getElementById('backButton');
         const backButtonText = document.getElementById('backButtonText');
-        
+
         if (!backButton || !backButtonText) return;
-        
+
         const referrer = document.referrer;
-        
+
         if (referrer.includes('space_oracle.html')) {
             backButtonText.textContent = 'Space Oracleに戻る';
             backButton.onclick = () => window.location.href = 'space_oracle.html';
@@ -136,14 +157,14 @@ const SpaceCowboy = {
     /**
      * スムーススクロールの初期化
      */
-    initSmoothScroll: function() {
+    initSmoothScroll: function () {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
-                
+
                 if (targetId === '#') return;
-                
+
                 const target = document.querySelector(targetId);
                 if (target) {
                     target.scrollIntoView({

@@ -116,7 +116,7 @@
                         見上げよう空を、<br>
                         つながろう宇宙で。
                     </p>
-                    <p id="hero-subtitle-2" class="text-sm md:text-base font-light leading-loose">
+                    <p id="hero-subtitle-2" class="text-sm md:text-base font-light text-gray-400 leading-loose">
                         日々の忙しさのなか、ふと空を見上げて心を落ち着かせる。<br>
                         そして夢を描き、未来へ思いを馳せる。<br>
                         そんな瞬間で、人と人とをつなげていきたい。<br><br>
@@ -161,11 +161,11 @@
             <div class="mb-16 md:flex md:items-start md:gap-12">
                 <!-- 左側：テキスト -->
                 <div class="md:w-1/2 grid grid-rows-[1fr_auto] gap-4">
-                    <h3 class="text-2xl md:text-3xl mb-4">
+                    <h3 class="text-xl md:text-2xl mb-4">
                         宇宙のことも、<br>
                         クリエイティブのことも。
                     </h3>
-                    <p class="text-sm md:text-base max-w-3xl mb-12">
+                    <p class="text-xs md:text-sm max-w-3xl mb-12 font-light text-gray-400 leading-loose">
                         株式会社スペースカウボーイは、「宇宙事業部」と「クリエイティブ事業部」の2つの軸で事業を展開。
                         宇宙産業におけるコンテンツ制作・情報発信・エンジニアリング・プロダクト構想から、
                         地上のクリエイティブ課題まで幅広く支援しています。
@@ -182,9 +182,8 @@
                 </div>
                 <!-- 右側：画像 -->
                 <div class="mt-8 md:mt-0 md:w-1/2">
-                    <img src="service_overview.jpg" alt="サービス紹介画像"
-                        class="w-full h-auto rounded-xl shadow-lg opacity-0 transition-opacity duration-1000"
-                        loading="lazy"
+                    <img src="service_overview.png" alt="サービス紹介画像"
+                        class="w-full h-auto opacity-0 transition-opacity duration-1000" loading="lazy"
                         onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');" />
                 </div>
             </div>
@@ -351,7 +350,7 @@
                     <span class="text-sm md:text-base montserrat-regular">VIEW ALL &gt;</span>
                 </a>
             </div>
-            <div class="mb-16 md:flex md:items-start md:gap-12">
+            <div class="md:flex md:items-start md:gap-12">
                 <!-- 左側：テキスト -->
                 <div class="md:w-1/2 grid grid-rows-[1fr_auto] gap-4">
                     <div class="flex items-center mb-4">
@@ -403,14 +402,14 @@
             <div class="mb-16 md:flex md:items-start md:gap-12">
                 <!-- 左側：テキスト -->
                 <div class="md:w-1/2 grid grid-rows-[1fr_auto] gap-4">
-                    <h3 class="text-2xl md:text-3xl mb-4">
+                    <h3 class="text-xl md:text-2xl mb-4">
                         宇宙を身近に、<br>
                         未来を創造する。
                     </h3>
-                    <p class="text-sm md:text-base max-w-3xl mb-12">
-                        株式会社スペースカウボーイは、2023年に設立された宇宙産業とクリエイティブを融合する企業です。
+                    <p class="text-xs md:text-sm max-w-3xl mb-12 font-light text-gray-400 leading-loose">
+                        株式会社スペースカウボーイは、2025年に設立された宇宙産業とクリエイティブを融合する企業です。
                         最先端の技術と独創的な発想で、宇宙ビジネスの新たな地平を切り拓きます。
-                        私たちのビジョンは、誰もが宇宙の可能性に触れられる世界を実現すること。
+                        私たちのビジョンは、誰もが宇宙の可能性に触れられる世界を実現することです。
                     </p>
 
                     <div>
@@ -424,8 +423,9 @@
                 </div>
                 <!-- 右側：画像 -->
                 <div class="mt-8 md:mt-0 md:w-1/2">
-                    <img src="https://picsum.photos/600/400?random=company" alt="会社紹介画像"
-                        class="w-full h-auto rounded-xl shadow-lg" loading="lazy" />
+                    <img src="company_overview.jpg" alt="会社紹介画像"
+                        class="w-full h-auto opacity-0 transition-opacity duration-1000" loading="lazy"
+                        onload="this.classList.remove('opacity-0'); this.classList.add('opacity-100');" />
                 </div>
             </div>
         </div>
@@ -460,11 +460,12 @@
                     <li><a href="/company.html" class="montserrat-bold hover:underline">COMPANY</a></li>
                     <li><a href="/service.html" class="montserrat-bold hover:underline">SERVICE</a>
                         <ul class="ml-4 mt-1 space-y-1">
-                            <li><a href="/service.html#space-division" class="text-sm text-gray-400 hover:underline">—
+                            <li><a href="/service.html#space-division"
+                                    class="montserrat-regular text-sm text-gray-400 hover:underline">—
                                     SPACE
                                     DIVISION</a></li>
                             <li><a href="/service.html#creative-division"
-                                    class="text-sm text-gray-400 hover:underline">— CREATIVE
+                                    class="montserrat-regular text-sm text-gray-400 hover:underline">— CREATIVE
                                     DIVISION</a></li>
                         </ul>
                     </li>

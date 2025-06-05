@@ -117,66 +117,75 @@
             </div>
 
             <!-- お問い合わせフォーム -->
-            <div class="max-w-4xl mx-auto px-6 md:px-12 bg-gray-900 bg-opacity-80 py-24">
-                <form action="#" method="post" class="max-w-2xl mx-auto space-y-8">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <!-- お名前 -->
+            <div class="w-full bg-gray-900 bg-opacity-80">
+                <div class="max-w-4xl mx-auto px-6 md:px-12 py-24">
+                    <form id="contactForm" class="max-w-2xl mx-auto space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- お名前 -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-3 text-gray-300">お名前 *</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
+                            </div>
+
+                            <!-- 会社名・団体名 -->
+                            <div>
+                                <label for="company"
+                                    class="block text-sm font-medium mb-3 text-gray-300">会社名・団体名</label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
+                            </div>
+                        </div>
+
+                        <!-- メールアドレス -->
                         <div>
-                            <label for="name" class="block text-sm font-medium mb-3 text-gray-300">お名前 *</label>
-                            <input type="text" id="name" name="name" required
+                            <label for="email" class="block text-sm font-medium mb-3 text-gray-300">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required
                                 class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
                         </div>
 
-                        <!-- 会社名・団体名 -->
+                        <!-- 電話番号 -->
                         <div>
-                            <label for="company" class="block text-sm font-medium mb-3 text-gray-300">会社名・団体名</label>
-                            <input type="text" id="company" name="company"
+                            <label for="phone" class="block text-sm font-medium mb-3 text-gray-300">電話番号</label>
+                            <input type="tel" id="phone" name="phone"
                                 class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
                         </div>
-                    </div>
-
-                    <!-- メールアドレス -->
-                    <div>
-                        <label for="email" class="block text-sm font-medium mb-3 text-gray-300">メールアドレス *</label>
-                        <input type="email" id="email" name="email" required
-                            class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
-                    </div>
-
-                    <!-- 電話番号 -->
-                    <div>
-                        <label for="phone" class="block text-sm font-medium mb-3 text-gray-300">電話番号</label>
-                        <input type="tel" id="phone" name="phone"
-                            class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors placeholder-gray-500">
-                    </div>
 
 
 
-                    <!-- メッセージ -->
-                    <div>
-                        <label for="message" class="block text-sm font-medium mb-3 text-gray-300">お問合せ内容 *</label>
-                        <textarea id="message" name="message" rows="6" required
-                            class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors resize-vertical placeholder-gray-500"
-                            placeholder="お問い合わせ内容を詳しくお聞かせください。"></textarea>
-                    </div>
+                        <!-- メッセージ -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-3 text-gray-300">お問合せ内容 *</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-0 py-4 bg-transparent text-white border-0 border-b-2 border-gray-600 focus:border-blue-400 outline-none transition-colors resize-vertical placeholder-gray-500"
+                                placeholder="お問い合わせ内容を詳しくお聞かせください。"></textarea>
+                        </div>
 
-                    <!-- プライバシーポリシー同意 -->
-                    <div class="flex items-start space-x-3">
-                        <input type="checkbox" id="privacy_policy" name="privacy_policy" required
-                            class="mt-1 w-4 h-4 text-blue-600 bg-transparent border-2 border-gray-600 focus:border-blue-400 focus:ring-0 outline-none">
-                        <label for="privacy_policy" class="text-sm text-gray-300 leading-relaxed">
-                            <a href="/privacy.html" target="_blank"
-                                class="text-blue-400 hover:text-blue-300 underline">プライバシーポリシー</a>に同意します *
-                        </label>
-                    </div>
+                        <!-- ハニーポット（スパム対策） -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
 
-                    <!-- 送信ボタン -->
-                    <div class="text-center pt-8">
-                        <button type="submit" class="hero-cta-button inline-flex items-center">
-                            <span class="text-2xl mr-2">📧</span>
-                            送信する
-                        </button>
-                    </div>
-                </form>
+                        <!-- プライバシーポリシー同意 -->
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" id="privacy_policy" name="privacy_policy" required
+                                class="mt-1 w-4 h-4 text-blue-600 bg-transparent border-2 border-gray-600 focus:border-blue-400 focus:ring-0 outline-none">
+                            <label for="privacy_policy" class="text-sm text-gray-300 leading-relaxed">
+                                <a href="/privacy.html" target="_blank"
+                                    class="text-blue-400 hover:text-blue-300 underline">プライバシーポリシー</a>に同意します *
+                            </label>
+                        </div>
+
+                        <!-- 送信ボタン -->
+                        <div class="text-center pt-8">
+                            <button type="submit" id="submitButton" class="hero-cta-button inline-flex items-center">
+                                <span class="text-2xl mr-2">📧</span>
+                                <span id="buttonText">送信する</span>
+                            </button>
+                            <div id="formMessage" class="mt-4 text-sm"></div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </div>
@@ -199,11 +208,12 @@
                     <li><a href="/company.html" class="montserrat-bold hover:underline">COMPANY</a></li>
                     <li><a href="/service.html" class="montserrat-bold hover:underline">SERVICE</a>
                         <ul class="ml-4 mt-1 space-y-1">
-                            <li><a href="/service.html#space-division" class="text-sm text-gray-400 hover:underline">—
+                            <li><a href="/service.html#space-division"
+                                    class="montserrat-regular text-sm text-gray-400 hover:underline">—
                                     SPACE
                                     DIVISION</a></li>
                             <li><a href="/service.html#creative-division"
-                                    class="text-sm text-gray-400 hover:underline">— CREATIVE
+                                    class="montserrat-regular text-sm text-gray-400 hover:underline">— CREATIVE
                                     DIVISION</a></li>
                         </ul>
                     </li>
@@ -256,6 +266,79 @@
         SpaceCowboy.init({
             starCount: 100,
             enableSmoothScroll: false
+        });
+
+        // フォーム読み込み時刻を記録（スパム対策）
+        const formLoadTime = Date.now();
+
+        // フォーム送信処理
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitButton = document.getElementById('submitButton');
+            const buttonText = document.getElementById('buttonText');
+            const formMessage = document.getElementById('formMessage');
+
+            // ハニーポットチェック（スパム対策）
+            if (document.getElementById('website').value) {
+                // スパムボットの可能性が高い
+                formMessage.innerHTML = '<p class="text-red-400">エラーが発生しました。</p>';
+                return;
+            }
+
+            // 時間チェック（3秒以内の送信を拒否）
+            const submitTime = Date.now();
+            if (submitTime - formLoadTime < 3000) {
+                formMessage.innerHTML = '<p class="text-red-400">送信が早すぎます。もう一度お試しください。</p>';
+                return;
+            }
+
+            // ボタンを無効化し、送信中の表示に変更
+            submitButton.disabled = true;
+            buttonText.textContent = '送信中...';
+
+            // フォームデータを取得
+            const formData = {
+                name: document.getElementById('name').value,
+                company: document.getElementById('company').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })
+            };
+
+            // GASのWebアプリURLを設定（後で実際のURLに置き換えてください）
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyqu5PtlZtuzkp9ETIISQEbbsqCJN4rhvKJtQfFTPYYaEkvAoGPpfnLpj7VP98FfE0j/exec';
+
+            // データを送信
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(() => {
+                    // 成功時の処理
+                    formMessage.innerHTML = '<p class="text-green-400">お問い合わせありがとうございます。<br>内容を確認次第、ご連絡させていただきます。</p>';
+                    formMessage.classList.add('animate-fadeIn');
+                    document.getElementById('contactForm').reset();
+                    buttonText.textContent = '送信完了';
+
+                    // 3秒後にボタンを元に戻す
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        buttonText.textContent = '送信する';
+                    }, 3000);
+                })
+                .catch(error => {
+                    // エラー時の処理
+                    console.error('Error:', error);
+                    formMessage.innerHTML = '<p class="text-red-400">送信中にエラーが発生しました。<br>しばらくしてから再度お試しください。</p>';
+                    submitButton.disabled = false;
+                    buttonText.textContent = '送信する';
+                });
         });
     </script>
 </body>
